@@ -1,4 +1,4 @@
-# emgithub
+# gist-it
 
 https://emgithub.com/
 
@@ -36,12 +36,12 @@ There are two ways to use the service:
           </code>
         </pre>
         </div>
-  
+
         <div class="html-area markdown-body">
           <!-- for Markdown/Jupyter Notebook  -->
         </div>
       </div>
-  
+
       <div class="file-meta">
         <!-- footer -->
       </div>
@@ -61,7 +61,7 @@ You can modify the code and test it by launching an HTTP server in the project d
    ```
 2. Make the changes.
 3. Visit <http://localhost:8086/404.html>.
-   
+
    > Don't be confused by the "404". It is how the "adding em in the address bar" works: after adding the "em", the HTTP server (provided by GitHub Pages) can't find the file so it renders `404.html`. Then in the 404 page, the target file is extracted from the URL.
 
 ## Create your own emgithub

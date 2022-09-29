@@ -311,7 +311,7 @@
       style="${showBorder ? '' : 'border:0'}">
       <a target="_blank" href="${rawFileURL}" style="float:right">view raw</a>
       <a target="_blank" href="${fileURL}">${decodeURIComponent(showFullPath ? filePath : pathSplit[pathSplit.length - 1])}</a>
-      delivered <span class="hide-in-phone">with ❤ </span>by <a target="_blank" href="${serviceProvider}">emgithub</a>
+      delivered <span class="hide-in-phone">with ❤ </span>by <a target="_blank" href="${serviceProvider}/gist-it">gist-it</a>
     </div>`: ''
     }
 
@@ -463,7 +463,7 @@
       });
 
       // Load Katex and KatexAutoRender after Notebookjs, to avoid the logic bug in https://github.com/jsvine/notebookjs/blob/02f0b451a0095f839c28b267c568f40694ad9362/notebook.js#L265-L273
-      // Specifically, in that code snippet, if `el.innerHTML` is assigned with something like `include <stdio.h>`, 
+      // Specifically, in that code snippet, if `el.innerHTML` is assigned with something like `include <stdio.h>`,
       // then the value read from `el.innerHTML` will be `include <stdio.h></stdio.h>`,
       // So if `#include <stdio.h>` is in a Markdown code block, wrong results will be rendered
       const loadKatex = typeof katex != "undefined" ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js');
