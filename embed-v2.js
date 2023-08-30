@@ -356,10 +356,10 @@
         insertStyle(text);
       });
 
-    const loadKatexStyle = fetch('https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css')
+    const loadKatexStyle = fetch('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css')
       .then((response) => response.text())
       .then((text) => {
-        insertStyle(text.replaceAll('url(fonts/', 'url(https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/fonts/'));
+        insertStyle(text.replaceAll('url(fonts/', 'url(https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/fonts/'));
       });
 
     promises.push(loadMarked);
@@ -466,8 +466,8 @@
       // Specifically, in that code snippet, if `el.innerHTML` is assigned with something like `include <stdio.h>`,
       // then the value read from `el.innerHTML` will be `include <stdio.h></stdio.h>`,
       // So if `#include <stdio.h>` is in a Markdown code block, wrong results will be rendered
-      const loadKatex = typeof katex != "undefined" ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js');
-      const loadKatexAutoRender = loadKatex.then(() => typeof renderMathInElement != "undefined" ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js'));
+      const loadKatex = typeof katex != "undefined" ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js');
+      const loadKatexAutoRender = loadKatex.then(() => typeof renderMathInElement != "undefined" ? Promise.resolve() : loadScript('https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js'));
       loadKatexAutoRender.then(() => {
         renderMathInElement(targetDiv, {
           delimiters: [
